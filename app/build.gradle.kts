@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "edu.ischool.lton2.awty"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "edu.ischool.lton2.awty"
