@@ -8,6 +8,8 @@ import org.junit.runner.RunWith
 
 import org.junit.Assert.*
 
+
+
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -20,5 +22,11 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("edu.ischool.lton2.awty", appContext.packageName)
+    }
+
+    @Test
+    fun phoneNumberCorrect() {
+        val phoneNumber = "2066737818"
+        assertEquals("(206) 673-7818", formatPhone(phoneNumber),)
     }
 }

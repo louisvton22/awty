@@ -98,8 +98,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-    fun formatPhone(phone: String): String {
-        return "(${phone.slice(0..3)}) ${phone.slice(4..6)}-${phone.slice(7..9)} "
-    }
+}
+fun formatPhone(phone: String): String {
+    return "(${phone.slice(0..2)}) ${phone.slice(3..5)}-${phone.slice(6..9)}"
 }
