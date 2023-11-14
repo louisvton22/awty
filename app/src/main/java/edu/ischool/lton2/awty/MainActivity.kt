@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
             // make pending intent
             val intent = Intent(ALARM_ACTIOM)
             val pendingIntent =
-                PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+                PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
             Log.i("MainActivity", "$duration")
             val alarmManager: AlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmManager.setRepeating(
@@ -100,6 +100,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun formatPhone(phone: String): String {
-        return "(${phone.slice(1..3)}) ${phone.slice(4..6)}-${phone.slice(7..9)} "
+        return "(${phone.slice(0..3)}) ${phone.slice(4..6)}-${phone.slice(7..9)} "
     }
 }
